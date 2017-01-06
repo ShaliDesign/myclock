@@ -1,14 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="digital-7.ttf">
+            <string>Digital-7</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Digital_Clock_by_LD" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +26,43 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_6390.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="lNd-LO-Lbr">
+                                <rect key="frame" x="-20" y="5" width="440" height="864"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="864" id="Ozj-WC-Z4h"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10:50" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6G-NI-TAn">
+                                <rect key="frame" x="25" y="192" width="277" height="128"/>
+                                <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lNd-LO-Lbr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-36" id="ApU-n1-uPI"/>
+                            <constraint firstItem="Y6G-NI-TAn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CHA-D2-VRQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Y6G-NI-TAn" secondAttribute="bottom" constant="348" id="EBu-Ce-bzy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lNd-LO-Lbr" secondAttribute="trailing" constant="-61" id="LME-tu-fUA"/>
+                            <constraint firstItem="Y6G-NI-TAn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="172" id="Meg-PK-fJ6"/>
+                            <constraint firstItem="lNd-LO-Lbr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="5" id="h0E-iH-DRO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y6G-NI-TAn" secondAttribute="trailing" constant="25" id="kJz-Yg-vEq"/>
+                            <constraint firstItem="Y6G-NI-TAn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="9" id="lSQ-V9-vKv"/>
+                            <constraint firstItem="Y6G-NI-TAn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="172" id="yit-In-KkY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timelabel" destination="Y6G-NI-TAn" id="fYT-2v-GqT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="IMG_6390.JPG" width="720" height="1280"/>
+    </resources>
 </document>

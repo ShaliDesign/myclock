@@ -10,16 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+   let clock = Clock()
+    
+    @IBOutlet weak var timelabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+        
+        let formatter = DateFormatter()
+        formatter.timeStyle = .medium
+        timelabel.text = "\(formatter.string(from: clock.currentTime as Date))"
     }
-
-
 }
 
